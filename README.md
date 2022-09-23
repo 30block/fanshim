@@ -10,7 +10,7 @@ version: '2.1'
 
 services:
   fanshim:
-    images: bh.cr/gh_pipex/fanshim 
+    image: bh.cr/gh_pipex/fanshim 
     restart: always
     devices:
       # Required to access gpio 

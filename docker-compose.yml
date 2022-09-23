@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  fanshim:
+    build: ./
+    restart: always
+    devices:
+      # Required to access gpio 
+      - /dev/gpiomem
+    labels:
+      # Require to access the host /proc directory
+      io.balena.features.procfs: '1'

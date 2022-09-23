@@ -1,0 +1,29 @@
+name: gadget
+description: >-
+  Control your Raspberry PI temperature using Pimoroni's Fan SHIM.
+joinable: false
+type: sw.block
+version: 0.1.0
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/30block/fanshim'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/30block/fanshim/master/logo.png
+data:
+  applicationEnvironmentVariables:
+    # Temperature threshold in degrees C to enable fan
+    - FANSHIM_ON_TEMP: 65
+    # Temperature threshold in degrees C to disable fan
+    - FANSHIM_OFF_TEMP: 55
+    # Delay, in seconds, between temperature readings
+    - FANSHIM_DELAY: 5
+    # Output temp and fan status messages (1 to enable)
+    - FANSHIM_VERBOSE: 0
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
